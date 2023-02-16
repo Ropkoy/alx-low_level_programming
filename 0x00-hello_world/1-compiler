@@ -1,2 +1,4 @@
 #!/bin/bash
-gcc .c $CFILE -o $OUTPUT 
+CFILE="main.c"
+OUTPUT="${CFILE%.c}.o"
+gcc -c $CFILE -o $OUTPUT 
