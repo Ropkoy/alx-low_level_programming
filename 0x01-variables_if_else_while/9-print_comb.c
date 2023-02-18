@@ -1,40 +1,22 @@
 #include<stdio.h>
-
 /**
- * main - print combos without repeats
+ * main - pritn single digit numbers
  *
  * Return: 0
  */
 int main(void)
 {
-	int f = '0';
-	int s = '0';
+	int n = '0';
 
-	while (f <= '9')
+	while (n <= '9')
 	{
-		s = '0';
-		while (s <= '9')
+		putchar(n);
+		if (n < '9')
 		{
-			if (s == f)
-			{
-			}
-			else if (f > s)
-			{
-			}
-			else
-			{
-				putchar(f);
-				putchar(s);
-				if (s == '9' && f == '8')
-				{
-					break;
-				}
-				putchar(',');
-				putchar(' ');
-			}
-			s++;
+			putchar(',');
+			putchar(' ');
 		}
-		f++;
+		n++;
 	}
 	putchar('\n');
 	return (0);
