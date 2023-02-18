@@ -1,21 +1,41 @@
-#include <stdio.h>
+#include<stdio.h>
+
 /**
- * main - Entry point
+ * main - print combos without repeats
  *
- * Return: Always 0 (success)
+ * Return: 0
  */
 int main(void)
 {
-	int n;
+	int f = '0';
+	int s = '0';
 
-	for (n = 48; n < 58; n++)
+	while (f <= '9')
 	{
-		putchar(n);
-		if (n != 57)
+		s = '0';
+		while (s <= '9')
 		{
-			putchar(',');
-			putchar(' ');
+			if (s == f)
+			{
+			}
+			else if (f > s)
+			{
+			}
+			else
+			{
+				putchar(f);
+				putchar(s);
+				if (s == '9' && f == '8')
+				{
+					break;
+				}
+				putchar(',');
+				putchar(' ');
+			}
+			s++;
 		}
+		f++;
+	}
 	putchar('\n');
 	return (0);
 }
