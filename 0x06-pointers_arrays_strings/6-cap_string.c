@@ -1,32 +1,29 @@
 /**
- * cap_string - Capitalizes all words of a string.
- * @s: A pointer to the string to be converted.
- *
- * Return: A pointer to the resulting string.
- */
+  * cap_string - ...
+  * @s: ...
+  *
+  * Return: char value
+  */
 char *cap_string(char *s)
 {
-int i, j;
-int capitalize = 1; /* Capitalize the next character */
+	int a = 0, i;
+	int cspc = 13;
+	char spc[] = {32, '\t', '\n', 44, ';', 46, '!', '?', '"', '(', ')', '{', '}'};
 
-for (i = 0; s[i] != '\0'; i++)
-{
-if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' ||
-s[i] == ',' || s[i] == ';' || s[i] == '.' ||
-s[i] == '!' || s[i] == '?' || s[i] == '"' ||
-s[i] == '(' || s[i] == ')' || s[i] == '{' ||
-s[i] == '}')
-{
-capitalize = 1;
-}
-else if (capitalize)
-{
-if (s[i] >= 'a' && s[i] <= 'z')
-{
-s[i] = s[i] - 32;
-}
-capitalize = 0;
-}
-}
-return s;
+	while (s[a])
+	{
+		i = 0;
+
+		while (i < cspc)
+		{
+			if ((a == 0 || s[a - 1] == spc[i]) && (s[a] >= 97 && s[a] <= 122))
+				s[a] -= 32;
+
+			i++;
+		}
+
+		a++;
+	}
+
+	return (s);
 }
