@@ -1,25 +1,25 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+/**
+ * _strcat - Concatenates two strings.
+ * @dest: A pointer to the destination string.
+ * @src: A pointer to the source string.
+ *
+ * Return: A pointer to the resulting string.
+ */
+char *_strcat(char *dest, char *src)
+{
+    char *start = dest;
 
-char* concatenate_strings(char* str1, char* str2) {
-    int len1 = strlen(str1);
-    int len2 = strlen(str2);
-    char* result = (char*) malloc(len1 + len2 + 1);  // +1 for null terminator
-    if (result == NULL) {
-        printf("Error: unable to allocate memory.\n");
-        exit(1);
+    while (*dest != '\0')
+        dest++;
+
+    while (*src != '\0')
+    {
+        *dest = *src;
+        dest++;
+        src++;
     }
-    strcpy(result, str1);
-    strcat(result, str2);
-    return result;
-}
 
-int main() {
-    char* str1 = "Hello, ";
-    char* str2 = "world!";
-    char* result = concatenate_strings(str1, str2);
-    printf("%s\n", result);
-    free(result);  // free dynamically allocated memory
-    return 0;
+    *dest = '\0';
+
+    return start;
 }
