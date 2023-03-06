@@ -1,50 +1,25 @@
 #include <stdio.h>
+#include "main.h"
 
-void _putchar(char c);
+/**
+ * _strpbrk - Entry point
+ * @s: input
+ * @accept: input
+ * Return: Always 0 (Success)
+ */
 
-int main()
+char *_strpbrk(char *s, char *accept)
 {
-    char str[] = "Hello, world!";
-    char accept[] = "aeiouy";
+	int i, n;
 
-    // Search for first vowel in str
-    char *result = _strpbrk(str, accept);
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (n = 0; accept[n] != '\0'; n++)
+		{
+			if (s[i] == accept[n])
+				return (s + i);
+		}
+	}
 
-    // Print result
-    if (result == NULL) {
-        _putchar('N');
-        _putchar('o');
-        _putchar(' ');
-        _putchar('v');
-        _putchar('o');
-        _putchar('w');
-        _putchar('e');
-        _putchar('l');
-        _putchar('s');
-        _putchar(' ');
-        _putchar('f');
-        _putchar('o');
-        _putchar('u');
-        _putchar('n');
-        _putchar('d');
-        _putchar('\n');
-    } else {
-        _putchar('F');
-        _putchar('i');
-        _putchar('r');
-        _putchar('s');
-        _putchar('t');
-        _putchar(' ');
-        _putchar('v');
-        _putchar('o');
-        _putchar('w');
-        _putchar('e');
-        _putchar('l');
-        _putchar(':');
-        _putchar(' ');
-        _putchar(*result);
-        _putchar('\n');
-    }
-
-    return 0;
+	return (NULL);
 }
