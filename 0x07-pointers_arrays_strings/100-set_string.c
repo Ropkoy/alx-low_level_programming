@@ -1,9 +1,12 @@
-#include <main.h>
+#include "main.h"
 
-int main() {
-    char *s = NULL;
-    char *to = "hello, world!";
-    set_string(&s, to);
-    printf("%s\n", s);
-    return 0;
+/**
+ * set_string - Entry point
+ * @s: input
+ * @to: input
+ * Return: Always 0 (Success)
+ */
+void set_string(char **s, char *to)
+{
+	*s = to;
 }
