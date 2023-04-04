@@ -6,10 +6,8 @@
  * @head: pointer to head of list
  * Return: sum of list
  */
-
 int sum_listint(listint_t *head)
 {
-
 	listint_t *current;
 
 	register int sum = 0;
@@ -19,7 +17,7 @@ int sum_listint(listint_t *head)
 	current = head;
 	while (current)
 	{
-		um += current->n;
+		sum += current->n;
 		current = current->next;
 	}
 	return (sum);
