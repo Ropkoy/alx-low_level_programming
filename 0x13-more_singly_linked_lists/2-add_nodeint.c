@@ -1,10 +1,4 @@
 #include "lists.h"
-#include <stdlib.h>
-
-typedef struct listint_s {
-    int n;
-    struct listint_s *next;
-} listint_t;
 
 /**
  * add_nodeint - adds a new node at the beginning of a listint_t list.
@@ -12,6 +6,7 @@ typedef struct listint_s {
  * @n: the value to be stored in the new node
  * Return: pointer to the new head of the list
  */
+
 listint_t *add_nodeint(listint_t **head, int n)
 {
     listint_t *new_node = malloc(sizeof(listint_t));
