@@ -1,4 +1,4 @@
-#include "lists,h"
+#include "lists.h"
 #include <stdlib.h>
 
 /**
@@ -9,7 +9,6 @@
  *
  * Return: pointer to the indexed node
  */
-
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	unsigned int i;
