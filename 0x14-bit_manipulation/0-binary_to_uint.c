@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 
 /**
  * binary_to_uint - Converts binary no to unsigned int
